@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketing Digital Mind Map</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="toolbar">
+      <div>
+        <h1>🧠 Marketing Digital</h1>
+        <p>Produto → Audiência → Comunidade → Venda → Escala</p>
+      </div>
+      <div class="buttons">
+        <button id="addNode">＋ Novo bloco</button>
+        <button id="connectMode">↗ Conectar</button>
+        <button id="exportJson">↓ Exportar mapa</button>
+        <button id="importJson">↑ Importar mapa</button>
+        <button id="resetMap">↺ Restaurar</button>
+        <input id="fileInput" type="file" accept=".json" hidden>
+      </div>
+    </header>
+
+    <main>
+      <div id="map">
+        <svg id="connections"></svg>
+      </div>
+
+      <div class="hint">
+        Arraste os blocos. Clique em <b>Editar</b> para alterar informações.
+        Use <b>Conectar</b> e depois clique em dois blocos para criar uma ligação.
+      </div>
+
+      <section id="editor" class="editor hidden">
+        <h2>Editar bloco</h2>
+        <label>Etapa</label>
+        <input id="editStep" placeholder="Ex.: 01 • ESTRATÉGIA">
+        <label>Título</label>
+        <input id="editTitle" placeholder="Nome da etapa">
+        <label>Informações</label>
+        <textarea id="editInfo" placeholder="Tarefas, ferramentas, métricas, links..."></textarea>
+        <div>
+          <button id="saveNode">Salvar</button>
+          <button id="closeEditor" class="secondary">Fechar</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+*{box-sizing:border-box}
+:root{--bg:#0b0d12;--panel:#11141b;--card:#191d26;--text:#f4f5f7;--muted:#9da4b1;--border:#303643;--accent:#7c5cff}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.app{max-width:1400px;margin:auto;padding:20px}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:15px}
+h1{margin:0;font-size:22px}.toolbar p{margin:5px 0 0;color:var(--muted);font-size:13px}
+.buttons{display:flex;gap:8px;flex-wrap:wrap}
+button{border:1px solid var(--border);background:var(--card);color:var(--text);padding:9px 12px;border-radius:9px;cursor:pointer}
+button:hover{border-color:var(--accent)}button:focus{outline:2px solid var(--accent);outline-offset:2px}
+#map{height:700px;position:relative;overflow:hidden;border:1px solid var(--border);border-radius:14px;background:var(--panel);background-image:radial-gradient(#303643 1px,transparent 1px);background-size:22px 22px;touch-action:none}
+#connections{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.node{position:absolute;width:190px;min-height:95px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;box-shadow:0 8px 25px rgba(0,0,0,.25);cursor:grab;user-select:none}
+.node:active{cursor:grabbing}.node.selected{border-color:var(--accent)}
+.node .step{font-size:10px;color:#a895ff;font-weight:800;letter-spacing:.04em}
+.node h3{font-size:14px;margin:5px 0;font-weight:750}.node p{font-size:11px;line-height:1.45;color:var(--muted);white-space:pre-wrap;margin:0}
+.actions{display:flex;gap:5px;margin-top:9px}.actions button{font-size:10px;padding:5px 7px}
+.hint{font-size:12px;color:var(--muted);margin:9px 0}
+.editor{max-width:600px;padding:15px;border:1px solid var(--border);border-radius:12px;background:var(--card)}
+.hidden{display:none}.editor h2{font-size:16px;margin-top:0}.editor label{display:block;font-size:12px;color:var(--muted);margin:9px 0 5px}
+.editor input,.editor textarea{width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;background:#0c0f15;color:var(--text);font:inherit}
+.editor textarea{min-height:120px;resize:vertical}.editor button{margin-top:10px}.secondary{background:transparent}
+@media(max-width:700px){.app{padding:12px}#map{height:650px}.node{width:160px}.toolbar{align-items:flex-start}}
